@@ -84,7 +84,7 @@ text alighned left, [c]centered text[/c] or [r]right-alighned text[/r]
 
 YouTube embeding:
 ID only: [yt]00000000000[/yt] Short: [yt]https://youtu.be/00000000000[/yt] Full: [yt]https://www.youtube.com/watch?v=00000000000[/yt]
-[font=Arial]Arial font[/font], also may be [font="Lucide Consoles"]Fint in quotation[/font] (any font possible to use)
+[font=Arial]Arial font[/font], also may be [font="Lucide Consoles"]font in quotation[/font] (any font possible to use)
 Colors short/full hex: [color=#000]text[/color] or rgb(a)/hsl(a), also [color="Azure"]coloring by name[/color]
 Some sizing: [size=1em]1[/size][size=10pt]2[/size][size=11px]3[/size][size=12px]4[/size][size=27mm]5[/size][size=5cm]6[/size][size=1vh]7[/size][size=1vw]8[/size]
 Shadowing text [glow=2,30,4,red]text[/glow] or [shadow=12,34,4,red]text[/shadow] (use same CSS effect: text-shadow)
@@ -110,7 +110,7 @@ Here | .
 
 %%
 - [ ] Trying to spoilering to-do list
-[Go to #](#) alsi hided
+[Go to #](#) also hided
 %%
 
 - list *with* markdown [o]too[/o]
