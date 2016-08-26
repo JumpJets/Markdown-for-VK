@@ -87,7 +87,7 @@ ID only: [yt]00000000000[/yt] Short: [yt]https://youtu.be/00000000000[/yt] Full:
 [font=Arial]Arial font[/font], also may be [font="Lucide Consoles"]font in quotation[/font] (any font possible to use)
 Colors short/full hex: [color=#000]text[/color] or rgb(a)/hsl(a), also [color="Azure"]coloring by name[/color]
 Some sizing: [size=1em]1[/size][size=10pt]2[/size][size=11px]3[/size][size=12px]4[/size][size=27mm]5[/size][size=5cm]6[/size][size=1vh]7[/size][size=1vw]8[/size]
-Shadowing text [glow=2,30,4,red]text[/glow] or [shadow=12,34,4,red]text[/shadow] (use same CSS effect: text-shadow)
+Shadowing text [glow=0,0,8,darkgreen]text[/glow] or [shadow=1,1,2,black]text[/shadow] (use same CSS effect: text-shadow)
 "\n" force newline character
 
 -------------
