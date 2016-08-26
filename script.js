@@ -55,7 +55,7 @@ function repl(str) {
 	str = str.replace(/\[font="?([\w\s]+)"?\]([^]+?)\[\/font\]/ig, '<span class="customfont" style=\'font-family: "$1";\'>$2</span>'); // [font=Arial]text[/font], also may be [font="Lucide Consoles"]text[/font]
 	str = str.replace(/\[color="?([\w\s#()]+)"?\]([^]+?)\[\/color\]/ig, '<span class="customcolor" style=\'color: $1;\'>$2</span>'); // same, but [color]-code
 	str = str.replace(/\[size="?([\w]+)"?\]([^]+?)\[\/size\]/ig, '<span class="customsize" style=\'font-size: $1;\'>$2</span>'); // same, but [size]-code
-	str = str.replace(/\[(?:glow|shadow)="?([\w\s]+)(,[\w\s]+)(,[\w\s]+)(,[\w\s]+)"?\]([^]+?)\[\/(?:glow|shadow)\]/ig, '<span class="shadow" style=\'text-shadow: $1px$2px$3px$4;\'>$5</span>'); // [glow=2,30,4,red]text[/glow] or [shadow=12,34,4,red]text[/shadow]
+	str = str.replace(/\[(?:glow|shadow)="?([\w\s]+)[, ]?([\w\s]+)[, ]?([\w\s]+)[, ]?([\w\s]+)"?\]([^]+?)\[\/(?:glow|shadow)\]/ig, '<span class="shadow" style=\'text-shadow: $1px$2px$3px$4;\'>$5</span>'); // [glow=2,30,4,red]text[/glow] or [shadow=12,34,4,red]text[/shadow]
 	str = str.replace(/(?:\\r)?\\n/g, '<br />'); // \n or \r\n replace to newline char
 	//console.timeEnd("Regex work");
 	return str;
