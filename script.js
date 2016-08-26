@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name		Markdown and BB-codes for vk.com
 // @namespace		vk.com/xcang
-// @version		2016.08.26.15.45
+// @version		2016.08.26.16.16
 // @description		Enable ability mark text in VK.
 // @author		XCanG
 // @match		vk.com/*
