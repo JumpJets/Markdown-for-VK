@@ -10,7 +10,7 @@
 // ==/UserScript==
 
 function repl(str) {
-	console.time("Regex work");
+	//console.time("Regex work");
 	str = str.replace(/>\s?(?:(?:-\s?){3,}|(?:\*\s?){3,}|(?:_\s?){3,})</ig, '><hr /><').replace(/\[hr\]/ig, '<hr />'); // *** --- ___ or more convert to line break (hr)
 	str = str.replace(/(<br\s*\/?>|[\r\n]+)(((?:[\*\-+](?:(?!<br\s*\/?>)(?!\s*\[[ x]\])[^\r\n\|])+)(?:<br\s*\/?>)?){2,})<br\s*\/?>/ig, '$1<ul class="list"><li>$2</li></ul>');
 	while (/(<li>|<br\s*\/?>[\*\-+]\s?)(?:[\*\-+]\s?)?((?:(?!<\/li>)(?!<li>)(?!<\/ul>)(?!\s*\[[ x]\])[^\r\n|])+?)<br\s*\/?>(?!<\/li>)[\*\-+]\s?((?!\s*\[[ x]\]).)/im.test(str)) str = str.replace(/(<li>|<br\s*\/?>[\*\-+]\s?)(?:[\*\-+]\s?)?((?:(?!<\/li>)(?!<li>)(?!<\/ul>)(?!\s*\[[ x]\])[^\r\n|])+?)<br\s*\/?>(?!<\/li>)[\*\-+]\s?((?!\s*\[[ x]\]).)/ig, '$1$2</li><li>$3');
@@ -55,7 +55,7 @@ function repl(str) {
 	str = str.replace(/\[size="?([\w]+)"?\]([^]+?)\[\/size\]/ig, '<span class="customsize" style=\'font-size: $1;\'>$2</span>'); // same, but [size]-code
 	str = str.replace(/\[(?:glow|shadow)="?([\w\s]+)(,[\w\s]+)(,[\w\s]+)(,[\w\s]+)"?\]([^]+?)\[\/(?:glow|shadow)\]/ig, '<span class="shadow" style=\'text-shadow: $1px$2px$3px$4;\'>$5</span>'); // [glow=2,30,4,red]text[/glow] or [shadow=12,34,4,red]text[/shadow]
 	str = str.replace(/(?:\\r)?\\n/g, '<br />'); // \n or \r\n replace to newline char
-	console.timeEnd("Regex work");
+	//console.timeEnd("Regex work");
 	return str;
 }
 
