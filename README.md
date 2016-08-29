@@ -1,27 +1,18 @@
-# Markdown and BB-codes for sites — VK
-For vk.com
+# Markdown and BB-codes for sites — Discuss.Moe
+For discuss.moe
 
 This script installed by [Tapermonkey](http://tampermonkey.net/) addon into page and executing.
 Script is universal in mean how to work on any site, but it require some special remarks _(for all sites: #identificator or .class where text need to mark, also: somewere add CSS rules, somewhere disable some markdown, somewhere edit regex to accurate pasting html code)_ to compleately work without issues.
 
 Markdown is based on Github markdown and [this article](https://daringfireball.net/projects/markdown/syntax) for exception markdown with spaces, because vk.com delete it from text.
 
-# Available markdown (for VK)
+# Available markdown (for D.M.)
 
 ```
-normal, *italic* or _italic_ or [i]italic[/i], **bold** or [b]bold[/b], ***b+i*** or _**b+i**_ or [b][i]b+i[/i][/b]
-__underline__ or [u]underline[/u], ~~strikeout~~ or [s]strikeout[/s], [o]overline[/o] (no md)
+~~strikeout~~, [o]overline[/o] (no md)
 [sup]superscript[/sup], [sub]subtitle[/sub]
 {#anchor} (test it by clicking [on this link](#anchor))
-`inline code`
-\```multiline code\``` or [code]also code[/code]
-> quote (blockquote)
-also
-> line 1 of blockquote (merged with line 2)
-> line 2
-also
-[quote]blockquote[/quote]
-spoiler(hide text under black background): %%spoiler%% or [spoiler]spoiler[/spoiler]
+spoiler(hide text under white blurred background): %%spoiler%%
 %highlighting%
 
 Lists:
@@ -46,20 +37,6 @@ also
 [2]item 2
 [3]item 3
 [/list]
-named link: [GitHub](http://github.com)
-# h1
-
-## h2
-
-### h3
-
-#### h4
-
-##### h5
-
-###### h6
-
-![Embed image](https://site.com/image.jpg)
 
 Compleate list:
 - [x] this is a complete item
@@ -71,12 +48,7 @@ First Header | Second Header | Third header
 Content from cell 1 | Content from cell 2 | Some blah blah blah
 Content in the first column | Content in the second column | Another content\nwith force newline
 
-@XCanG - mention
-***
 newline
-also:
----
-or:
 [hr]
 
 text alighned left, [c]centered text[/c] or [r]right-alighned text[/r]
@@ -85,19 +57,22 @@ text alighned left, [c]centered text[/c] or [r]right-alighned text[/r]
 YouTube embeding:
 ID only: [yt]00000000000[/yt] Short: [yt]https://youtu.be/00000000000[/yt] Full: [yt]https://www.youtube.com/watch?v=00000000000[/yt]
 [font=Arial]Arial font[/font], also may be [font="Lucide Consoles"]font in quotation[/font] (any font possible to use)
-Colors short/full hex: [color=#000]text[/color] or rgb(a)/hsl(a), also [color="Azure"]coloring by name[/color]
 Some sizing: [size=1em]1[/size][size=10pt]2[/size][size=11px]3[/size][size=12px]4[/size][size=27mm]5[/size][size=5cm]6[/size][size=1vh]7[/size][size=1vw]8[/size]
 Shadowing text [glow=0,0,8,darkgreen]text[/glow] or [shadow=1,1,2,black]text[/shadow] (use same CSS effect: text-shadow)
 "\n" force newline character
+[raw][/raw] or [html][/html] for paste html code by itself (need to replace < to &lt;)
 
 -------------
 Combinations (some test examples I use):
 > *text* ~~in quote~~
 > > quote in quote
 > > multiline too
+
 > some `inline code` too
+
 also
-> [yt]00000000000[/yt]
+> [yt]TPFQ49rDaiw[/yt]
+
 [c]Centered table
 Some | Table
 ---- | -----
@@ -114,9 +89,9 @@ Here | .
 %%
 
 - list *with* markdown [o]too[/o]
-- item 2
+- [spoiler]item 2[/spoiler]
 
-This will use CSS: word-break: break-all; word-wrap: break-word; and max-height (add vertical scroll bar) for convinient view
+This will use CSS: word-break: break-all; word-wrap: break-word; and max-height (add vertical scroll bar)
 \```
 long
 code
@@ -169,5 +144,16 @@ looongliiineheeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeereeeeee
 9
 0
 [/quote]
+Control post...
+[raw]&lt;input id="sepialevel" type="range" min="0" max="100" step="1" value="0" oninput="let val = this.value / 100; var sheet = document.createElement('style'); sheet.innerHTML = '.cooked { filter: sepia(' + val + '); -webkit-filter: sepia(' + val + '); }'; document.body.appendChild(sheet);"> Sepia<br>
+&lt;input id="sepialevel" type="range" min="0" max="200" step="2" value="100" oninput="let val = this.value / 100; var sheet = document.createElement('style'); sheet.innerHTML = '.cooked { filter: brightness(' + val + ');  -webkit-filter: brightness(' + val + '); }'; document.body.appendChild(sheet);"> Brightness<br>
+&lt;input id="sepialevel" type="range" min="0" max="200" step="2" value="100" oninput="let val = this.value / 100; var sheet = document.createElement('style'); sheet.innerHTML = '.cooked { filter: contrast(' + val + '); -webkit-filter: contrast(' + val + '); }'; document.body.appendChild(sheet);"> Contrast<br>
+&lt;input id="sepialevel" type="range" min="0" max="100" step="1" value="0" oninput="let val = this.value / 100; var sheet = document.createElement('style'); sheet.innerHTML = '.cooked { filter: grayscale(' + val + '); -webkit-filter: grayscale(' + val + '); }'; document.body.appendChild(sheet);"> Grayscale<br>
+&lt;input id="sepialevel" type="range" min="0" max="360" step="5" value="0" oninput="let val = this.value; var sheet = document.createElement('style'); sheet.innerHTML = '.cooked { filter: hue-rotate(' + val + 'deg); -webkit-filter: hue-rotate(' + val + 'deg); }'; document.body.appendChild(sheet);"> HUE rotate<br>
+&lt;input id="sepialevel" type="range" min="0" max="100" step="1" value="0" oninput="let val = this.value / 100; var sheet = document.createElement('style'); sheet.innerHTML = '.cooked { filter: invert(' + val + '); -webkit-filter: invert(' + val + '); }'; document.body.appendChild(sheet);"> Invert<br>
+&lt;input id="sepialevel" type="range" min="0" max="100" step="1" value="100" oninput="let val = this.value / 100; var sheet = document.createElement('style'); sheet.innerHTML = '.cooked { filter: opacity(' + val + '); -webkit-filter: opacity(' + val + '); }'; document.body.appendChild(sheet);"> Opacity<br>
+&lt;input id="sepialevel" type="range" min="0" max="200" step="2" value="100" oninput="let val = this.value / 100; var sheet = document.createElement('style'); sheet.innerHTML = '.cooked { filter: saturate(' + val + '); -webkit-filter: saturate(' + val + '); }'; document.body.appendChild(sheet);"> Saturate<br>
+&lt;input id="sepialevel" type="range" min="0" max="40" step="1" value="0" oninput="let val = this.value; var sheet = document.createElement('style'); sheet.innerHTML = '.cooked { filter: blur(' + val + 'px); -webkit-filter: blur(' + val + 'px); }'; document.body.appendChild(sheet);"> Blur<br>
+[/raw]
 e.t.c.
 ```
