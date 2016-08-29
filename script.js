@@ -2,7 +2,7 @@
 // @name			Markdown and BB-codes for vk.com
 // @name:ru			Разметка и BB-коды для vk.com
 // @namespace		vk.com/xcang
-// @version			2016.08.26.16.26
+// @version			2016.08.29.19.24
 // @description		Enable ability mark text in VK.
 // @description:ru	Включает возможность размечать и оформлять текст в контакте.
 // @author			XCanG
