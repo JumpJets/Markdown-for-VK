@@ -2,7 +2,7 @@
 // @name			Markdown and BB-codes for discuss.moe
 // @name:ru			Разметка и BB-коды для discuss.moe
 // @namespace		https://discuss.moe/users/xcang
-// @version			2016.08.29.21.54
+// @version			2016.09.12.03.12
 // @description		Enable ability mark text in VK.
 // @description:ru	Включает возможность размечать и оформлять текст в контакте.
 // @author			XCanG
@@ -74,8 +74,7 @@ function apply_md() {
 
 function upd_md_el() {
 	//console.time("Update time");
-	//md_el = Array.prototype.slice.call(document.getElementsByClassName('wall_post_text'), 0).concat(Array.prototype.slice.call(document.getElementsByClassName('wall_reply_text'), 0)).concat(Array.prototype.slice.call(document.getElementsByClassName('im_msg_text'), 0)).concat(Array.prototype.slice.call(document.getElementsByClassName('fc_msg'), 0)).concat(Array.prototype.slice.call(document.getElementsByClassName('nim-dialog--preview'), 0));
-	md_el = Array.prototype.slice.call(document.getElementsByClassName('cooked'), 0);
+	md_el = Array.prototype.slice.call(document.getElementsByClassName('cooked'), 0).concat(Array.prototype.slice.call(document.getElementsByClassName('expanded-quote'), 0));
 	apply_md();
 	//console.timeEnd("Update time");
 }
